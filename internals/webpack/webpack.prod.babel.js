@@ -4,10 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const OfflinePlugin = require('offline-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
-
-const packageJSON = require('../../package.json')
-
-const pkg = Object.keys(packageJSON)
+const pkg = require(path.resolve(process.cwd(), 'package.json'));
 
 module.exports = require('./webpack.base.babel')({
   mode: 'production',
@@ -35,6 +32,7 @@ module.exports = require('./webpack.base.babel')({
   plugins: [
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
+      title: pkg.description,
       template: 'app/index.html',
       minify: {
         removeComments: true,
@@ -83,8 +81,8 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: pkg.name,
-      short_name: pkg.name,
+      name: pkg.description,
+      short_name: 'PK',
       description: pkg.description,
       background_color: '#fafafa',
       theme_color: '#b1624d',
