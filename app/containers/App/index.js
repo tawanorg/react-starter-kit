@@ -9,7 +9,7 @@
 import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
-import helmetConfig from 'helmetConfig'
+import helmetConfig from 'helmetConfig'; // eslint-disable-line import/no-unresolved
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 

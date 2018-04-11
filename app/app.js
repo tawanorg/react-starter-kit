@@ -4,7 +4,7 @@
  * This is the entry file for the application, only setup and boilerplate
  * code.
  */
-import 'normalize.css'
+import 'normalize.css';
 // Needed for redux-saga es6 generator support
 import 'babel-polyfill';
 
@@ -18,7 +18,7 @@ import createHistory from 'history/createHashHistory';
 import { ThemeProvider } from 'styled-components';
 
 // Import theme
-import defaultThemes from 'themes'
+import defaultThemes from 'themes';
 
 // Import root app
 import App from 'containers/App';
