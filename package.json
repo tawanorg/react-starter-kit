@@ -1,7 +1,7 @@
 {
-  "name": "preket web",
+  "name": "preket-web",
   "version": "1.0.0",
-  "description": "preket project",
+  "description": "Preket.com",
   "license": "MIT",
   "scripts": {
     "precommit": "npm run lint:staged",
