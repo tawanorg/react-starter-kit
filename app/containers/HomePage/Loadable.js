@@ -9,6 +9,6 @@ import Loadable from 'react-loadable';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 export default Loadable({
-  loader: () => require.ensure([], (require) => require("./index"), 'HomePage'),
+  loader: () => import('./index'),
   loading: () => LoadingIndicator,
 });

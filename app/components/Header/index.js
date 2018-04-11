@@ -3,24 +3,29 @@
 * Header
 *
 */
-import { Flex, Box } from 'grid-styled'
+
 import React from 'react';
 // import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+const Wrapper = styled.section`
+  background: ${props => props.theme.header.background};
+`
 
-function Header() {
+const Header = () => {
   return (
-    <div>
-      <FormattedMessage {...messages.header} />
-    </div>
-  );
+    <Wrapper>
+      Header
+    </Wrapper>
+  )
 }
 
 Header.propTypes = {
 
 };
 
-export default Header;
+Header.defaultProps = {
+
+};
+
+export default Header

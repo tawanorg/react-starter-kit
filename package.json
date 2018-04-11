@@ -195,7 +195,7 @@
       "express",
       "ip",
       "minimist",
-      "sanitize.css"
+      "normalize.css"
     ],
     "include": [
       "core-js",
@@ -251,6 +251,7 @@
     "ip": "1.1.5",
     "lodash": "4.17.5",
     "minimist": "1.2.0",
+    "normalize.css": "^8.0.0",
     "prop-types": "15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -264,7 +265,6 @@
     "redux-immutable": "4.0.0",
     "redux-saga": "0.16.0",
     "reselect": "3.0.1",
-    "sanitize.css": "4.1.0",
     "styled-components": "2.3.0",
     "warning": "3.0.0",
     "whatwg-fetch": "2.0.4"

@@ -4,7 +4,7 @@
  * This is the entry file for the application, only setup and boilerplate
  * code.
  */
-
+import 'normalize.css'
 // Needed for redux-saga es6 generator support
 import 'babel-polyfill';
 
@@ -15,7 +15,10 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/createHashHistory';
-import 'sanitize.css/sanitize.css';
+import { ThemeProvider } from 'styled-components';
+
+// Import theme
+import defaultThemes from 'themes'
 
 // Import root app
 import App from 'containers/App';
@@ -59,7 +62,9 @@ const render = (messages) => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <App />
+          <ThemeProvider theme={defaultThemes}>
+            <App />
+          </ThemeProvider>
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,
