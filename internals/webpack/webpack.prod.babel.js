@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const OfflinePlugin = require('offline-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
+const pkg = require(path.resolve(process.cwd(), 'package.json'));
 
 module.exports = require('./webpack.base.babel')({
   mode: 'production',
@@ -31,6 +32,7 @@ module.exports = require('./webpack.base.babel')({
   plugins: [
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
+      title: pkg.description,
       template: 'app/index.html',
       minify: {
         removeComments: true,
@@ -79,9 +81,9 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: 'React Boilerplate',
-      short_name: 'React BP',
-      description: 'My React Boilerplate-based project!',
+      name: pkg.description,
+      short_name: 'PK',
+      description: pkg.description,
       background_color: '#fafafa',
       theme_color: '#b1624d',
       icons: [
