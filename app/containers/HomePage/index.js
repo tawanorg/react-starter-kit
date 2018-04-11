@@ -24,7 +24,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     return (
       <div>
         <Helmet>
-          <title>HomePage</title>
+          <title>Welcome</title>
           <meta name="description" content="Description of HomePage" />
         </Helmet>
         <FormattedMessage {...messages.header} />
