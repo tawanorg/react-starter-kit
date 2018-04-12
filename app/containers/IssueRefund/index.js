@@ -27,6 +27,7 @@ import StaticModal from 'components/StaticModal'
 
 // Custom views
 import GeneralOrderInfo from './views/GeneralOrderInfo'
+import ItemListingTable from './views/ItemListingTable'
 
 // Sub-components
 import Wrapper from './subcomponents/Wrapper'
@@ -36,6 +37,7 @@ export class IssueRefund extends React.PureComponent { // eslint-disable-line re
     console.log('IssueRefund', this.props)
     const {
       orderInfo,
+      memberItems,
     } = this.props
 
     return (
@@ -47,6 +49,7 @@ export class IssueRefund extends React.PureComponent { // eslint-disable-line re
         <Wrapper>
           <StaticModal>
             <GeneralOrderInfo {...orderInfo} />
+            <ItemListingTable items={memberItems} />
           </StaticModal>
         </Wrapper>
       </Fragment>

@@ -64,7 +64,7 @@ function cleanRepo(callback) {
  */
 function dontClearRepo(nl, callback) {
   clearRepo = false;
-  process.stdout.write(nl + 'Leaving your repository untouched');
+  process.stdout.write(nl + 'Setup repository');
   addCheckMark(callback);
 }
 

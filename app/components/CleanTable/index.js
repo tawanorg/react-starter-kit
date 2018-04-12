@@ -32,5 +32,6 @@ export default styled(CleanTable)`
     font-weight: inherit;
     border-top: none;
     border-bottom: 1px solid #dee2e6;
+    padding-left: 0;
   }
 `;
