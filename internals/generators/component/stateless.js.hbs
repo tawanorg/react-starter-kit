@@ -5,17 +5,19 @@
 */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 {{#if wantMessages}}
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 {{/if}}
 
-const {{ properCase name }} = () => {
+const {{ properCase name }} = ({
+  className,
+}) => {
   return (
-    <div>
+    <div className={className}>
     {{#if wantMessages}}
       <FormattedMessage {...messages.header} />
     {{/if}}
@@ -24,13 +26,12 @@ const {{ properCase name }} = () => {
 }
 
 {{ properCase name }}.propTypes = {
-
+  className: PropTypes.string,
 };
 
 {{ properCase name }}.defaultProps = {
-
+  className: '',
 };
 
 export default styled({{ properCase name }})`
-  background: #fff;
 `;
