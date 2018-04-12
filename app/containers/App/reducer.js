@@ -5,14 +5,14 @@
  */
 
 import { fromJS } from 'immutable';
-import globalRoutes from '../../globalRoutes'
+import globalRoutes from '../../globalRoutes';
 
 import {
   DEFAULT_ROUTES,
 } from './constants';
 
 const initialState = fromJS({
-  navigation: globalRoutes
+  navigation: globalRoutes,
 });
 
 function appReducer(state = initialState, action) {

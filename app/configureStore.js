@@ -20,7 +20,7 @@ export default function configureStore(initialState = {}, history) {
   ];
 
   if (process.env.NODE_ENV === 'development') {
-    const { createLogger } = require('redux-logger')
+    const { createLogger } = require('redux-logger');
     const logger = createLogger({
       // Transform Immutable objects into JSON
       stateTransformer: (state) => {
@@ -36,9 +36,9 @@ export default function configureStore(initialState = {}, history) {
         }
 
         return newState;
-      }
-    })
-    middlewares.push(logger)
+      },
+    });
+    middlewares.push(logger);
   }
 
   const enhancers = [

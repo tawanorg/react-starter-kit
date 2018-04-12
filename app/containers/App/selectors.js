@@ -22,10 +22,10 @@ const makeSelectApp = () => createSelector(
 const makeNavigation = () => createSelector(
   selectAppDomain,
   (substate) => substate.get('navigation').toJS()
-)
+);
 
 export default makeSelectApp;
 export {
   selectAppDomain,
-  makeNavigation
+  makeNavigation,
 };

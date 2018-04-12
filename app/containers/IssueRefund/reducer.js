@@ -5,7 +5,7 @@
  */
 import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
-import * as constants from './constants'
+import * as constants from './constants';
 const initialState = fromJS({
   data: [],
   isFetching: false,
@@ -19,11 +19,11 @@ function orderInfoReducer(state = initialState, action) {
       return state
             .set('isFetching', true);
     case constants.LOADED_ORDER_INFO:
-      const { data } = action.payload
+      const { data } = action.payload;
       return state
             .set('isFetching', false)
             .set('isFetched', true)
-            .set('data', data)
+            .set('data', data);
     case constants.ERROR_ORDER_INFO:
       return state;
     default:

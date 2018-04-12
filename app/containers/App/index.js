@@ -24,8 +24,8 @@ import messages from './messages';
 export class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     const {
-      navigation
-    } = this.props
+      navigation,
+    } = this.props;
 
     return (
       <Fragment>

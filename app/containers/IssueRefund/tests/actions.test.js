@@ -1,18 +1,18 @@
 
 import {
-  defaultAction,
+  requestOrderInfo,
 } from '../actions';
 import {
-  DEFAULT_ACTION,
+  REQUEST_ORDER_INFO,
 } from '../constants';
 
 describe('IssueRefund actions', () => {
   describe('Default Action', () => {
-    it('has a type of DEFAULT_ACTION', () => {
+    it('has a type of REQUEST_ORDER_INFO', () => {
       const expected = {
-        type: DEFAULT_ACTION,
+        type: REQUEST_ORDER_INFO,
       };
-      expect(defaultAction()).toEqual(expected);
+      expect(requestOrderInfo()).toEqual(expected);
     });
   });
 });

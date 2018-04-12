@@ -6,5 +6,5 @@ export default [
     path: '/organisation/refund/:id',
     exact: true,
     component: IssueRefund,
-  }
-]
+  },
+];

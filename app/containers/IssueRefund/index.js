@@ -23,22 +23,22 @@ import saga from './saga';
 import messages from './messages';
 
 // Components
-import StaticModal from 'components/StaticModal'
+import StaticModal from 'components/StaticModal';
 
 // Custom views
-import GeneralOrderInfo from './views/GeneralOrderInfo'
-import ItemListingTable from './views/ItemListingTable'
+import GeneralOrderInfo from './views/GeneralOrderInfo';
+import ItemListingTable from './views/ItemListingTable';
 
 // Sub-components
-import Wrapper from './subcomponents/Wrapper'
+import Wrapper from './subcomponents/Wrapper';
 
 export class IssueRefund extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
-    console.log('IssueRefund', this.props)
+    console.log('IssueRefund', this.props);
     const {
       orderInfo,
       memberItems,
-    } = this.props
+    } = this.props;
 
     return (
       <Fragment>

@@ -16,14 +16,14 @@ export function loadedOrderInfo(data) {
   return {
     type: constants.LOADED_ORDER_INFO,
     payload: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
 
 export function errorOrderInfo(error) {
   return {
     type: constants.ERROR_ORDER_INFO,
     error,
-  }
+  };
 }

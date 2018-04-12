@@ -18,5 +18,5 @@ export default [
     name: 'Page Not Found',
     path: '',
     component: NotFoundPage,
-  }
-]
+  },
+];

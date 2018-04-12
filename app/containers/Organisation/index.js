@@ -18,7 +18,7 @@ import makeSelectOrganisation from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import messages from './messages';
-import subroutes from './subroutes'
+import subroutes from './subroutes';
 
 export class Organisation extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {

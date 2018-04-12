@@ -13,24 +13,22 @@ const StaticModal = ({
   className,
   renderButtons,
   title,
-}) => {
-  return (
-    <div className={`modal-content ${className}`}>
-      <div className="modal-header">
-        <h5 className="modal-title">{title}</h5>
-      </div>
-      <div className="modal-body">
-        {children}
-      </div>
-      {
+}) => (
+  <div className={`modal-content ${className}`}>
+    <div className="modal-header">
+      <h5 className="modal-title">{title}</h5>
+    </div>
+    <div className="modal-body">
+      {children}
+    </div>
+    {
         renderButtons &&
         <div className="modal-footer d-flex">
           {renderButtons()}
         </div>
       }
-    </div>
-  )
-}
+  </div>
+  );
 
 StaticModal.propTypes = {
   children: PropTypes.node.isRequired,
@@ -45,4 +43,4 @@ StaticModal.defaultProps = {
   title: 'Modal Title Text',
 };
 
-export default StaticModal
+export default StaticModal;

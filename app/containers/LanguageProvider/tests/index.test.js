@@ -28,22 +28,3 @@ describe('<LanguageProvider />', () => {
     expect(renderedComponent.contains(children)).toBe(true);
   });
 });
-
-describe('<ConnectedLanguageProvider />', () => {
-  let store;
-
-  beforeAll(() => {
-    store = configureStore({}, browserHistory);
-  });
-
-  it('should render the default language messages', () => {
-    const renderedComponent = mount(
-      <Provider store={store}>
-        <ConnectedLanguageProvider messages={translationMessages}>
-          <FormattedMessage {...messages.someMessage} />
-        </ConnectedLanguageProvider>
-      </Provider>
-    );
-    expect(renderedComponent.contains(<FormattedMessage {...messages.someMessage} />)).toBe(true);
-  });
-});

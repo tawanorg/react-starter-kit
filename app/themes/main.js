@@ -7,6 +7,6 @@ export default {
     h2: {
       fontWeight: 900,
       fontSize: '32px',
-    }
-  }
-}
+    },
+  },
+};

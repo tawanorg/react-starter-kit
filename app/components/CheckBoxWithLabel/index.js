@@ -11,14 +11,12 @@ import styled from 'styled-components';
 const CheckBoxWithLabel = ({
   children,
   name,
-}) => {
-  return (
-    <div className="custom-control custom-checkbox">
-      <input type="checkbox" className="custom-control-input" id={name} />
-      <label className="custom-control-label" for={name}>{children}</label>
-    </div>
-  )
-}
+}) => (
+  <div className="custom-control custom-checkbox">
+    <input type="checkbox" className="custom-control-input" id={name} />
+    <label className="custom-control-label" htmlFor={name}>{children}</label>
+  </div>
+  );
 
 CheckBoxWithLabel.propTypes = {
   children: PropTypes.node.isRequired,
@@ -26,7 +24,7 @@ CheckBoxWithLabel.propTypes = {
 };
 
 CheckBoxWithLabel.defaultProps = {
-  name: 'CheckboxName'
+  name: 'CheckboxName',
 };
 
-export default CheckBoxWithLabel
+export default CheckBoxWithLabel;

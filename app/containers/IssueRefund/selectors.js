@@ -33,5 +33,5 @@ export default makeSelectIssueRefund;
 export {
   selectIssueRefundDomain,
   makeOrderInfo,
-  makeMembersItems
+  makeMembersItems,
 };

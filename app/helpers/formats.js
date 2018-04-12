@@ -1,5 +1,3 @@
-import moment from 'moment'
+import moment from 'moment';
 
-export const formatDateTime = (datetime) => {
-  return moment(datetime).format('YYYY-DD-MM HH:mm')
-}
+export const formatDateTime = (datetime) => moment(datetime).format('YYYY-DD-MM HH:mm');

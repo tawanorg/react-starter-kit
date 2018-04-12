@@ -1,18 +1,18 @@
 
 import {
-  defaultAction,
+  defaultRoutes,
 } from '../actions';
 import {
-  DEFAULT_ACTION,
+  DEFAULT_ROUTES,
 } from '../constants';
 
 describe('App actions', () => {
   describe('Default Action', () => {
-    it('has a type of DEFAULT_ACTION', () => {
+    it('has a type of DEFAULT_ROUTES', () => {
       const expected = {
-        type: DEFAULT_ACTION,
+        type: DEFAULT_ROUTES,
       };
-      expect(defaultAction()).toEqual(expected);
+      expect(defaultRoutes()).toEqual(expected);
     });
   });
 });

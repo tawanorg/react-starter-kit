@@ -25,7 +25,7 @@ export function location(state = null, action) {
 }
 
 const routeReducer = combineReducers({
-  location
+  location,
 });
 
 /**

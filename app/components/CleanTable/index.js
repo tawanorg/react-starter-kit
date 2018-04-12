@@ -10,14 +10,12 @@ import styled from 'styled-components';
 
 const CleanTable = ({
   className,
-  children
-}) => {
-  return (
-    <table className={`table ${className}`}>
-      {children}
-    </table>
-  )
-}
+  children,
+}) => (
+  <table className={`table ${className}`}>
+    {children}
+  </table>
+  );
 
 CleanTable.propTypes = {
   className: PropTypes.string,
