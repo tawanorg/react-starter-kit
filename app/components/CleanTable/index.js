@@ -26,7 +26,8 @@ CleanTable.defaultProps = {
 };
 
 export default styled(CleanTable)`
-  td, th {
+  td,
+  th {
     font-weight: inherit;
     border-top: none;
     border-bottom: 1px solid #dee2e6;

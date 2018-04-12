@@ -8,11 +8,8 @@ import { combineReducers } from 'redux-immutable';
 
 import {
   CHANGE_LOCALE,
-} from './constants';
-
-import {
   DEFAULT_LOCALE,
-} from '../App/constants';
+} from './constants';
 
 function locale(state = DEFAULT_LOCALE, action) {
   switch (action.type) {
