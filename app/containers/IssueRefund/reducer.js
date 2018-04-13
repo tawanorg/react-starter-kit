@@ -7,6 +7,7 @@ import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
 import * as constants from './constants';
 const initialState = fromJS({
+  id: null,
   data: [],
   isFetching: false,
   isFetched: false,
@@ -17,7 +18,8 @@ function orderInfoReducer(state = initialState, action) {
   switch (action.type) {
     case constants.REQUEST_ORDER_INFO:
       return state
-            .set('isFetching', true);
+            .set('isFetching', true)
+            .set('id', action.payload.id);
     case constants.LOADED_ORDER_INFO:
       const { data } = action.payload;
       return state

@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import CleanTable from 'components/CleanTable'
 
-import { formatDateTime } from 'helpers/formats'
+import { formatMoney, formatDateTime } from 'helpers/formats'
 
 export const GeneralOrderInfo = ({
   CurrencyCode,
@@ -19,7 +19,7 @@ export const GeneralOrderInfo = ({
     },
     {
       column: "Amount",
-      value: `${CurrencyCode} ${OrderAmount}`
+      value: `${CurrencyCode} ${formatMoney(OrderAmount)}`
     },
     {
       column: "Purchased by",

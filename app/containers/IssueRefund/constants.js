@@ -9,6 +9,17 @@ export const LOADED_ORDER_INFO = 'app/IssueRefund/LOADED_ORDER_INFO';
 export const ERROR_ORDER_INFO = 'app/IssueRefund/ERROR_ORDER_INFO';
 
 
+// Options
+export const OPTIONS_YES_NO = {
+  YES: 'Yes',
+  NO: 'No',
+}
+
+export const OPTIONS_REFUND_TYPES = {
+  PARTIAL: 'Partial',
+  FULLAMOUNT: 'Full Amount',
+}
+
 // API
 // Base API URL
 export const REFUND_API_URL = 'https://ap-southeast-2.integration.cloud.tibcoapps.com/';

@@ -16,17 +16,12 @@ const StaticModal = ({
 }) => (
   <div className={`modal-content ${className}`}>
     <div className="modal-header">
-      <h5 className="modal-title">{title}</h5>
+      <span className="modal-title">{title}</span>
     </div>
     <div className="modal-body">
       {children}
     </div>
-    {
-        renderButtons &&
-        <div className="modal-footer d-flex">
-          {renderButtons()}
-        </div>
-      }
+    {renderButtons && renderButtons()}
   </div>
   );
 

@@ -14,6 +14,11 @@ const selectIssueRefundDomain = (state) => state.get('issueRefund');
  * Default selector used by IssueRefund
  */
 
+const makeOrderId = (ownProps) => createSelector(
+  selectIssueRefundDomain,
+  (substate) => ownProps.match.params.id
+);
+
 const makeSelectIssueRefund = () => createSelector(
   selectIssueRefundDomain,
   (substate) => substate.toJS()
@@ -34,4 +39,5 @@ export {
   selectIssueRefundDomain,
   makeOrderInfo,
   makeMembersItems,
+  makeOrderId
 };

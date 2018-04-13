@@ -6,9 +6,12 @@
 
 import * as constants from './constants';
 
-export function requestOrderInfo() {
+export function requestOrderInfo(id) {
   return {
     type: constants.REQUEST_ORDER_INFO,
+    payload: {
+      id,
+    }
   };
 }
 
@@ -24,6 +27,8 @@ export function loadedOrderInfo(data) {
 export function errorOrderInfo(error) {
   return {
     type: constants.ERROR_ORDER_INFO,
-    error,
+    payload: {
+      error,
+    }
   };
 }

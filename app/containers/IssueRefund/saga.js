@@ -1,19 +1,22 @@
-import { fork, take, call, put, select } from 'redux-saga/effects';
+import { all, fork, take, call, put, select, takeLatest } from 'redux-saga/effects';
 import request from 'utils/request';
 import {
+  // API
   REFUND_API_URL,
   REFUND_REFUNDABLE_ORDER_ITEMS,
+  // Redux
+  REQUEST_ORDER_INFO,
 } from './constants';
 import * as actions from './actions';
+import { makeOrderId } from './selectors'
 
-export function* fetchOrderInfo() {
-  yield put(actions.requestOrderInfo());
-
+function* fetchOrderInfo({ payload }) {
+  const id = payload.id
   const endpoint = `${REFUND_API_URL}${REFUND_REFUNDABLE_ORDER_ITEMS}`;
-  const payload = {
+  const fetchOption = {
     method: 'POST',
     body: JSON.stringify({
-      orderId: 202837,
+      orderId: id,
     }),
     headers: {
       'Content-Type': 'application/json',
@@ -21,7 +24,7 @@ export function* fetchOrderInfo() {
   };
 
   try {
-    const response = yield call(request, endpoint, payload);
+    const response = yield call(request, endpoint, fetchOption);
     yield put(actions.loadedOrderInfo(response.OrderDetails));
   } catch (e) {
     yield put(actions.errorOrderInfo(e));
@@ -29,6 +32,6 @@ export function* fetchOrderInfo() {
 }
 
 // Individual exports for testing
-export default function* defaultSaga() {
-  yield fork(fetchOrderInfo);
+export default function* root() {
+  yield fork(takeLatest, REQUEST_ORDER_INFO, fetchOrderInfo)
 }
